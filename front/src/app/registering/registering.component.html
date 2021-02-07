@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+<div class="page">
+  <div class="registering">
+    <form [formGroup]="registeringForm" (ngSubmit)="register()">
+      <div class="inputs">
+        <label>
+          <input type="text" formControlName="username" placeholder="Enter your login">
+        </label>
+        <br>
+
+        <label>
+          <input type="password" formControlName="password" placeholder="Enter your password">
+        </label>
+
+        <label>
+          <input type="password" formControlName="passwordConfirm" placeholder="Confirm password">
+        </label>
+      </div>
+
+      <div class="button">
+        <button [disabled]="registeringForm.invalid" (click)="register()" type="button">
+          Create account
+        </button>
+      </div>
+    </form>
+
+    <p class="invalid-user" [hidden]="!this.registeringForm.controls.username.errors?.invalid">
+      <small>Username already exists</small>
+    </p>
+
+    <div
+      *ngIf="registeringForm.get('password')?.invalid && registeringForm.get('password')?.touched &&
+             registeringForm.get('passwordConfirm')?.touched" class="validation">
+      <small *ngIf="registeringForm.get('password')?.errors?.required">
+        Password cant be empty <br>
+      </small>
+
+      <small *ngIf="registeringForm.get('password')?.errors?.minlength">
+        Password must be at least 6 characters long <br>
+      </small>
+
+      <small *ngIf="registeringForm.get('password')?.value !== registeringForm.get('passwordConfirm')?.value">
+        Passwords do not match <br>
+      </small>
+    </div>
+
+  </div>
+</div>
+

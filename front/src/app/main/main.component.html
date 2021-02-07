@@ -1,0 +1,53 @@
+<app-header-auth></app-header-auth>
+
+<div class="container">
+    <div class="info">
+      <p>Лабораторная работа №4</p>
+    </div>
+
+    <div class="svg">
+      <app-svg></app-svg>
+    </div>
+
+
+    <div class="menu">
+      <div class="input_form">
+        <form [formGroup]="dotsForm" (ngSubmit)="submit(); shortTableComponent.refreshTable()">
+          <div class="x">
+            <p> Choose X</p>
+            <p-dropdown dataKey="0"
+                        [options]="dropDownValues" formControlName="xValue"></p-dropdown>
+          </div>
+
+          <div class="r">
+            <p> Choose R</p>
+            <p-dropdown dataKey="0" (ngModelChange)="radiusUpdate()"
+                        [options]="dropDownValues" formControlName="rValue"></p-dropdown>
+          </div>
+
+          <div class="y">
+            <p>Choose Y</p>
+            <input
+              [ngClass]="{'input-invalid':this.dotsForm.controls.yValue.touched
+                                     && this.dotsForm.controls.yValue.invalid}"
+              type="text" name="y" formControlName="yValue" placeholder="[-3;3]"/>
+          </div>
+
+
+          <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="results-button">
+        <button (click)="goToResults()">Results</button>
+      </div>
+
+      <div class="short-table">
+          <app-short-table></app-short-table>
+      </div>
+    </div>
+
+</div>

@@ -1,0 +1,41 @@
+button {
+  margin-top: 20px;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #fa0b47;
+  height: 30px;
+  width: 100px;
+  border: 0;
+  border-radius: 5px;
+
+  margin-bottom: 10px;
+}
+
+button:first-child {
+  margin-left: 145px;
+}
+
+button:last-child {
+ margin-left: 15px;
+}
+
+.info {
+  width: 100%;
+}
+
+
+
+button:hover {
+  background-color: #da324e;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.table {
+  margin: 20px auto 0;
+  width: 70%;
+}

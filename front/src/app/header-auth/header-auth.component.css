@@ -1,0 +1,35 @@
+header {
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 15px;
+  background-color: #383838;
+  color: 	#e0e0e0;
+  height: 90px;
+}
+
+#header_text {
+  margin-top: 10px;
+  margin-left: 20px;;
+  text-align: left;
+  float: left;
+}
+
+header img {
+  float: left;
+  width: 65px;
+  height: 65px;
+  margin-left: 10px;
+}
+
+button {
+  float: right;
+  height: 30px;
+  width: 70px;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #bfbfbf;
+}

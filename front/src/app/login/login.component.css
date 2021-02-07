@@ -1,0 +1,134 @@
+.login {
+  background: linear-gradient(231deg, #b5b5b5, #383838);
+  background-size: 400% 400%;
+
+  -webkit-animation: gradient-animation 59s ease infinite;
+  -moz-animation: gradient-animation 59s ease infinite;
+  animation: gradient-animation 59s ease infinite;
+  border: 1px solid #8d8d8d;
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+  margin: 150px auto 0;
+}
+
+form {
+  margin-top: 50px;
+}
+
+input {
+  background: white;
+
+  outline: none;
+  border: 0;
+  border-radius: 10px;
+  text-align: center;
+  height: 30px;
+  margin-left: 65px;
+  margin-top: 5px;
+}
+
+button {
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #fa0b47;
+  height: 30px;
+  width: 85px;
+  border: 0;
+  border-radius: 5px;
+  margin-top: 25px;
+  margin-left: 45px;
+}
+
+button:hover {
+  background-color: #da324e;
+}
+
+button:last-child {
+  margin-left: 30px;
+}
+
+.invalid-user {
+  text-align: center;
+  color: red;
+  margin-top: 30px;
+}
+
+@media (max-width: 880px) {
+  .login {
+    background: #888888;
+
+    width: 400px;
+    height: 400px;
+    margin: 60px auto 0;
+  }
+
+  input {
+    background: white;
+    height: 70px;
+    width: 250px;
+    margin-left: 65px;
+    font-size: 25px;
+  }
+
+  .inputs {
+    margin-top: 85px;
+  }
+
+  button {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    background-color: #fa0b47;
+    height: 60px;
+    width: 155px;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 65px;
+    margin-left: 30px;
+  }
+
+  button:hover {
+    background-color: #da324e;
+  }
+
+  button:last-child {
+    margin-left: 30px;
+  }
+
+  .invalid-user {
+    text-align: center;
+    color: red;
+    margin-top: 30px;
+  }
+
+  input::placeholder {
+    color: #dedede;
+    font-weight: 100;
+  }
+
+  .invalid-user {
+    text-align: center;
+    font-size: 35px;
+    color: red;
+    margin-top: 70px;
+  }
+}
+
+
+@-webkit-keyframes gradient-animation {
+  0%{background-position:0% 97%}
+  50%{background-position:100% 4%}
+  100%{background-position:0% 97%}
+}
+@-moz-keyframes gradient-animation {
+  0%{background-position:0% 97%}
+  50%{background-position:100% 4%}
+  100%{background-position:0% 97%}
+}
+@keyframes gradient-animation {
+  0%{background-position:0% 97%}
+  50%{background-position:100% 4%}
+  100%{background-position:0% 97%}
+}

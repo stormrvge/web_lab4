@@ -1,0 +1,34 @@
+<app-header-auth> </app-header-auth>
+
+
+
+<div class="table">
+  <div class="info">
+    <p>Table with results</p>
+    <button (click)="goToMain()">Main</button>
+    <button (click)="clearTable()">Clear table</button>
+  </div>
+
+  <p-table [value]="dots" [scrollable]="true" scrollHeight="330px">
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="x">X<p-sortIcon field="x"></p-sortIcon></th>
+        <th pSortableColumn="y">Y<p-sortIcon field="y"></p-sortIcon></th>
+        <th pSortableColumn="r">R<p-sortIcon field="r"></p-sortIcon></th>
+        <th pSortableColumn="hit">Hit<p-sortIcon field="hit"></p-sortIcon></th>
+        <th pSortableColumn="date">Date<p-sortIcon field="date"></p-sortIcon></th>
+        <th pSortableColumn="exec_time">Exec time<p-sortIcon field="exec_time"></p-sortIcon></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-dot>
+      <tr>
+        <td>{{dot.x}}</td>
+        <td>{{dot.y}}</td>
+        <td>{{dot.r}}</td>
+        <td>{{dot.hit}}</td>
+        <td>{{dot.date}}</td>
+        <td>{{dot.exec_time}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

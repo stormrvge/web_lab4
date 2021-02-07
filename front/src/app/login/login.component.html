@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="page">
+  <div class="login">
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <div class="inputs">
+        <label>
+          <input type="text" formControlName="username" placeholder="Enter your login">
+        </label>
+        <br>
+
+        <label>
+          <input type="password" formControlName="password" placeholder="Enter your password">
+        </label>
+      </div>
+
+
+      <button [disabled]="loginForm.invalid" type="submit">
+        Login
+      </button>
+
+      <button (click)="registerButton()" type="button">
+        Register
+      </button>
+    </form>
+
+    <p class="invalid-user" [hidden]="!this.loginForm.controls.username.errors?.invalid">
+      <small>Incorrect username or password</small>
+    </p>
+
+  </div>
+</div>
+
